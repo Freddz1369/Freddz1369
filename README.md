@@ -1,19 +1,17 @@
-# Workwear Selecta — GitHub Pages
+# workwear_selecta01
 
-Upload these files to the repository root:
+Workwear selection tool — a single-page app for picking workwear by gender, product,
+colour and size, with a soundtrack.
 
-- index.html
-- .nojekyll
-- assets/workwear-selecta-background.png
-- assets/enter-selecta-sting.mp3
-- assets/01-workwear-selecta.mp3
-- assets/02-mz-bratt-selecta-chebbyuk.mp3
-- assets/03-chase-status-selecta-bootleg.mp3
+**Live site:** https://workwear-selecta.github.io/Freddz1369/
 
-Then enable GitHub Pages:
+## Running it locally
 
-1. Settings → Pages
-2. Build and deployment → Deploy from a branch
-3. Select your main branch and `/ (root)`
-4. Save
-5. Open the HTTPS Pages URL GitHub provides
+No build step and no dependencies. Serve the folder over HTTP:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open <http://localhost:8000/>. Opening `index.html` directly from the file system
+mostly works, but browsers restrict audio playback over `file://`, so use the server.
