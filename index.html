@@ -4503,9 +4503,6 @@ window.WORKWEAR_PRODUCTS = [
 })();
 </script>
 
-</body>
-</html>
-
 <style>
 /* ===== SELECTION ACTIONS ALWAYS REACHABLE FIX ===== */
 @media (min-width: 901px) {
@@ -4565,4 +4562,47 @@ window.WORKWEAR_PRODUCTS = [
   width: 100% !important;
   margin-top: 14px !important;
 }
+
+/* --- Colour + size pickers: readable labels, full-width controls --- */
+
+/* Labels were --muted (#6b6b6b) on a mid-grey card: invisible. */
+.product-card .option-picker > span {
+  color: #ececec !important;
+  font-size: 0.66rem !important;
+}
+
+/* The fixed 62px label column left the select ~26px wide (chevron only).
+   Stack the label above the control so it gets the full card width. */
+.product-card .option-picker {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 4px !important;
+  align-items: stretch !important;
+}
+
+.product-card .product-options {
+  gap: 10px !important;
+}
+
+.product-card .color-select,
+.product-card .size-select {
+  width: 100% !important;
+  background: #f7f7f7 !important;
+  color: #111 !important;
+  border: 2px solid #24272a !important;
+  border-radius: 6px !important;
+  font-size: 0.8rem !important;
+}
+
+/* The basket is position:fixed and the layout already pads 386px for it,
+   so the 370px grid column was reserving that space a second time and
+   squeezing the product cards down to ~136px. */
+@media (min-width: 901px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
 </style>
+
+</body>
+</html>
