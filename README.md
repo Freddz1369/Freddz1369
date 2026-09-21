@@ -1,61 +1,19 @@
-# Workwear Selecta
+# Workwear Selecta — GitHub Pages
 
-Static GitHub Pages tool for selecting eligible workwear products against a hard **5,500 NOK** allowance.
+Upload these files to the repository root:
 
-## What it does
+- index.html
+- .nojekyll
+- assets/workwear-selecta-background.png
+- assets/enter-selecta-sting.mp3
+- assets/01-workwear-selecta.mp3
+- assets/02-mz-bratt-selecta-chebbyuk.mp3
+- assets/03-chase-status-selecta-bootleg.mp3
 
-- Shows the 68 eligible men's products from the approved spreadsheet.
-- Search, collection filter, category filter and sorting.
-- Adds/removes products from a live selection.
-- Hard cap at 5,500 NOK.
-- Products that no longer fit within the remaining allowance are dynamically disabled.
-- Selected products always remain removable.
-- Saves the current selection in the browser via `localStorage`.
-- Copies a clean order summary to the clipboard.
-- Responsive layout for desktop and mobile.
+Then enable GitHub Pages:
 
-## Files
-
-- `index.html` — page structure
-- `styles.css` — UI styling
-- `app.js` — selector logic
-- `products.js` — product data used by the app
-- `data/products.json` — same product data in JSON form
-- `data/products.csv` — spreadsheet-friendly source export
-- `.nojekyll` — lets GitHub Pages serve the files as-is
-
-## Update the allowance
-
-Change this line near the top of `app.js`:
-
-```js
-const ALLOWANCE = 5500;
-```
-
-## Update products
-
-The running app reads `products.js`. Keep each product in this shape:
-
-```js
-{
-  id: "femund-2673-26",
-  collection: "Femund",
-  model: "femund warm2 Jacket",
-  modelNumber: "2673-26",
-  category: "Fleece / Midlayer",
-  price: 1999
-}
-```
-
-## GitHub Pages
-
-The simplest deployment is:
-
-1. Put these files in the repository root.
-2. Commit and push to the default branch.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the default branch and `/ (root)`.
-6. Save.
-
-No Node.js, npm, build step, framework or server is required.
+1. Settings → Pages
+2. Build and deployment → Deploy from a branch
+3. Select your main branch and `/ (root)`
+4. Save
+5. Open the HTTPS Pages URL GitHub provides
